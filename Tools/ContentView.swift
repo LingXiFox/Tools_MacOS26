@@ -7,15 +7,28 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+struct ContentView: View
+{
+    var body: some View
+    {
+        TabView
+        {
+            Base64()
+                .tabItem
+                {
+                    Text("Base64编码")
+                }
+            Haxi()
+                .tabItem
+                {
+                    Text("哈希编码")
+                }
+            SettingView()
+                .tabItem
+                {
+                    Text("设置")
+                }
         }
-        .padding()
     }
 }
 
